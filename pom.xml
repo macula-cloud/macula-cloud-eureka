@@ -6,13 +6,12 @@
 	<parent>
 		<groupId>macula-cloud</groupId>
 		<artifactId>macula-cloud-starters</artifactId>
-		<version>2.0.0-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<groupId>macula-cloud</groupId>
 	<artifactId>macula-cloud-eureka</artifactId>
-	<version>2.0.0</version>
-	
+	<version>2.0.0-SNAPSHOT</version>
+
 	<name>macula-cloud-eureka</name>
 	<description>Spring Cloud Macula Eureka Extension Project</description>
 
@@ -33,6 +32,11 @@
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-registry-prometheus</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -40,13 +44,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<groupId>com.spotify</groupId>

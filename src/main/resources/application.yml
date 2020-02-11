@@ -1,0 +1,23 @@
+server:
+  port: ${SERVER_PORT:8761}
+spring:
+  application:
+    name: ${APPLICATION_NAME:macula-cloud-eureka}
+  cloud:
+    inetutils:
+      ignored-interfaces: ${IGNORED_INTERFACES:eth0}
+      preferred-networks: ${PREFERRED_NETWORKS:10.0}
+  security:
+    user:
+      name: ${USER_NAME:macula}
+      password: ${PASSWORD:macula2019}
+eureka:
+  client:
+    fetchRegistry: ${EUREKA_FETCH_REGISTRY:true}
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_LIST:http://${spring.security.user.name}:${spring.security.user.password}@localhost:${server.port}/eureka/}
+  instance:
+    prefer-ip-address: true
+  register-with-eureka: ${EUREKA_SELF_REGISTRY:true}
+  server:
+    enable-self-preservation: ${SELF_PRESERVATION:true}

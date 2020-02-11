@@ -1,0 +1,12 @@
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
+  server:
+    port: 9999
+  security:
+     enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
