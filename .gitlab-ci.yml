@@ -10,12 +10,14 @@ build:
    - mvn clean package
    
 release:
-   staging: release
+   stage: release
    scripts:
    - mvn dockerfile:build dockerfile:push
    only:
     - master
-
+    - /^release-.*$/
+    - /^hotfix-.*$/
+    
 before_script:
    - mkdir -p /root/.docker
    - echo "{\"auths\":{\"harbor.javalabs.com.cn\":{\"auth\":\"$(echo -n admin:Harbor12345 | base64)\"}}}" > /root/.docker/config.json
