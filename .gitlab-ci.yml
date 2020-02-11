@@ -11,7 +11,7 @@ build:
    
 release:
    stage: release
-   scripts:
+   script:
    - mvn dockerfile:build dockerfile:push
    only:
     - master
