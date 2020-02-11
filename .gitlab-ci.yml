@@ -12,7 +12,7 @@ build:
 release:
    stage: release
    script:
-   - mvn dockerfile:build dockerfile:push
+   - mvn clean package deploy dockerfile:build dockerfile:push
    only:
     - master
     - /^release-.*$/
