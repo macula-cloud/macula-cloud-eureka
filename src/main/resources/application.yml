@@ -15,9 +15,8 @@ eureka:
   client:
     fetchRegistry: ${EUREKA_FETCH_REGISTRY:true}
     serviceUrl:
-      defaultZone: ${EUREKA_SERVER_LIST:http://${spring.security.user.name}:${spring.security.user.password}@localhost:${server.port}/eureka/}
+      defaultZone: ${EUREKA_SERVER_LIST:http://${spring.security.user.name}:${spring.security.user.password}@${registry:localhost}:${server.port}/eureka/}
   instance:
     prefer-ip-address: true
-  register-with-eureka: ${EUREKA_SELF_REGISTRY:true}
   server:
     enable-self-preservation: ${SELF_PRESERVATION:true}
