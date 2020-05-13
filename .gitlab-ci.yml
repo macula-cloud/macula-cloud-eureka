@@ -8,6 +8,9 @@ build:
    stage: build
    script:
    - mvn clean package -U
+   only:
+    - /^release-.*$/
+    - /^hotfix-.*$/
    
 release:
    stage: release
