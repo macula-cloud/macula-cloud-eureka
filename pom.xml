@@ -12,6 +12,7 @@
 
 	<artifactId>macula-cloud-eureka</artifactId>
 	<name>macula-cloud-eureka</name>
+	<version>latest</version>
 	<description>Spring Cloud Macula Eureka Extension Project</description>
 
 	<properties>
