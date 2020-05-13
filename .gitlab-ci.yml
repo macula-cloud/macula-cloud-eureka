@@ -1,4 +1,4 @@
-image: harbor.javalabs.com.cn/javalabs-tools/ci-base:0.0.2
+image: registry.cn-hangzhou.aliyuncs.com/macula-cloud/ci-base:0.9.1
 
 stages:
    - build
@@ -20,4 +20,4 @@ release:
     
 before_script:
    - mkdir -p /root/.docker
-   - echo "{\"auths\":{\"harbor.javalabs.com.cn\":{\"auth\":\"$(echo -n admin:Harbor12345 | base64)\"}}}" > /root/.docker/config.json
+   - echo "{\"auths\":{\"registry.cn-hangzhou.aliyuncs.com\":{\"auth\":\"am9rZXdheTpmdWNrc2hpdEBhbGl5dW4=\"}}}" > /root/.docker/config.json
