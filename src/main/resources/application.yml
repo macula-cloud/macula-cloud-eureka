@@ -19,4 +19,4 @@ eureka:
   instance:
     prefer-ip-address: true
   server:
-    enable-self-preservation: ${SELF_PRESERVATION:true}
+    enable-self-preservation: ${SELF_PRESERVATION:false}
