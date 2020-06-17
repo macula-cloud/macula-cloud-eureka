@@ -8,9 +8,7 @@ replicaCount: 1
 image:
   # 镜像库地址
   repository: registry.cn-hangzhou.aliyuncs.com/macula-cloud/macula-cloud-eureka
-
   tag: latest
-
   # 镜像拉取策略
   pullPolicy: IfNotPresent
 
