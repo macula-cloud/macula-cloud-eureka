@@ -11,7 +11,7 @@ image:
   # 镜像版本
   tag: latest
   # 镜像拉取策略
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 initDB:
   # 是禁用始化数据库
