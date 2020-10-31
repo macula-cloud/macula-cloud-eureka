@@ -14,10 +14,6 @@
 	<name>macula-cloud-eureka</name>
 	<description>Spring Cloud Macula Eureka Extension Project</description>
 
-	<properties>
-		<main-class>org.macula.cloud.eureka.EurekaCloudApplication</main-class>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

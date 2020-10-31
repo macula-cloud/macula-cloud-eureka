@@ -1,16 +1,15 @@
 package org.macula.cloud.eureka;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-
-	private final Logger logger = LoggerFactory.getLogger(WebSecurityConfig.class);
 
 	@Override
 	public void configure(WebSecurity web) throws Exception {
@@ -19,7 +18,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		logger.info("Override httpSecurity use httpBasic authentication.");
+		log.info("Override httpSecurity use httpBasic authentication.");
 		http.csrf().disable().authorizeRequests().anyRequest().authenticated().and().httpBasic();
 	}
 
